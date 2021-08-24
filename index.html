@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <title>Firebase FireStore</title>
-</head>
-<body>
-  <h1>Cloud Cafe</h1>
-  <div class="content">
-    <form id="add-cafe-form"></form>
-    <ul id="cafe-list"></ul>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Firebase FireStore</title>
+  </head>
+  <body>
+    <h1>Cloud Cafe</h1>
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" name="name" id="" placeholder="Cafe name" />
+        <input type="text" name="city" id="" placeholder="Cafe city" />
+        <button>Add Cafe</button>
+      </form>
+      <ul id="cafe-list"></ul>
+    </div>
 
-  <!-- //! Firebase Configuration -->
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyDcdEK43ExiFvsBEtKAC7cU7aBXJ636wW8",
-      authDomain: "fire-firestore-rs.firebaseapp.com",
-      projectId: "fire-firestore-rs",
-      storageBucket: "fire-firestore-rs.appspot.com",
-      messagingSenderId: "71528908555",
-      appId: "1:71528908555:web:3ffaef9fa16a748cf9c40e"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-  db.settings({ timestampInSnapshots: true, merge: true });
-</script>
-  <script src="app.js"></script>
-</body>
+    <!-- //! Firebase Configuration -->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyDcdEK43ExiFvsBEtKAC7cU7aBXJ636wW8',
+        authDomain: 'fire-firestore-rs.firebaseapp.com',
+        projectId: 'fire-firestore-rs',
+        storageBucket: 'fire-firestore-rs.appspot.com',
+        messagingSenderId: '71528908555',
+        appId: '1:71528908555:web:3ffaef9fa16a748cf9c40e',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.settings({ timestampInSnapshots: true, merge: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
 </html>
