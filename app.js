@@ -26,7 +26,9 @@ function renderCafe(doc) {
   })
 }
 
+// ! getting data
 db.collection('cafes')
+  .where('city', '==', 'Dhaka')
   .get()
   .then((snapshot) => {
     snapshot.docs.forEach((doc) => {
