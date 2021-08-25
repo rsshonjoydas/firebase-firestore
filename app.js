@@ -63,3 +63,16 @@ db.collection('cafes')
       }
     });
   });
+
+// ! update data
+db.collection('cafes').doc('iFYKpVPet4chxY2BTkb3').update({
+  name: "Shonjoy",
+  city: "Jessore"
+})
+
+// ? OR
+
+// db.collection('cafes').doc('iFYKpVPet4chxY2BTkb3').set({
+//   name: "Shonjoy",
+//   city: "Jessore"
+// })
